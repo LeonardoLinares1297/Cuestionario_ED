@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #0a0a0a;
+    --box-bg: #1a1a1a;
+    --main-border: 2px solid #333333;
+    --shadow: 0px 8px 24px rgba(0, 0, 0, 0.6);
+    --btn-primary: #333333;
+    --btn-hover: #4d4d4d;
+    --btn-danger: #666666;
+    --text-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    width: 450px;
+    padding: 40px;
+    border-radius: 8px;
+    border: var(--main-border);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.1s;
+}
+
+h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: var(--main-border);
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: bold;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input:focus {
+    background-color: #1a1a1a;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: var(--main-border);
+    background-color: var(--btn-primary);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0 0 10px rgba(31, 111, 235, 0.4);
+}
+
+.btn-danger {
+    background-color: var(--btn-danger);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn-danger:hover {
+    background-color: #808080;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.option {
+    background-color: #0a0a0a;
+    margin-top: 15px;
+    color: #e0e0e0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: #0a0a0a;
+    border: var(--main-border);
+    margin-bottom: 30px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #666666 0%, #999999 100%);
+    width: 0%;
+    border-right: var(--main-border);
+    transition: width 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Efecto de daño crítico para mala UX */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake-animation {
+    animation: shake 0.4s;
+    animation-iteration-count: 1;
+    border-color: var(--btn-danger) !important;
+}

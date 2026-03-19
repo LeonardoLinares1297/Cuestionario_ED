@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuestionario UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <div id="loginScreen">
+            <h1>Entiende la UI</h1>
+            <input type="text" id="username" placeholder="Ingresa tu nombre...">
+            <button onclick="login()">Entrar al juego</button>
+        </div>
+
+        <div id="homeScreen" class="hidden">
+            <h1 id="welcome"></h1>
+            <p>¿Listo para comenzar?</p>
+            <button class="btn-start" onclick="startLesson()">Iniciar Lección: GUI</button>
+            <button class="btn-danger" onclick="logout()">Huir cobardemente</button>
+        </div>
+
+        <div id="quizScreen" class="hidden">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <h3 id="question"></h3>
+            <div id="options"></div>
+        </div>
+
+        <div id="resultScreen" class="hidden">
+            <h1>Reporte de Daños</h1>
+            <div class="result" id="scoreText"></div>
+            <button onclick="goHome()">Volver al inicio</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
